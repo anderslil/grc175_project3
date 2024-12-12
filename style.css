@@ -1,0 +1,428 @@
+@charset "UTF=8";
+@import url('https://fonts.googleapis.com/css2?family=Faculty+Glyphic&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*{
+    box-sizing: border-box;
+    box-sizing: inherit;
+    list-style: none;
+}
+
+h1,h2, h3{
+    font-family: "Faculty Glyphic", sans-serif;
+    color:#112B1D;
+}
+
+h2.green, h3.green{
+    color:white;
+}
+
+body{
+    font-family: "Quattrocento Sans", sans-serif;
+    color:#112B1D;
+    margin:0;
+    background-color:#EBEBEB;
+    height:100%;
+    font-size: 1.1em;
+}
+
+/* Grid */
+
+.container{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto; 
+    grid-template-columns: 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3% 8.3%;
+    grid-template-areas:
+        "banner banner banner banner banner banner banner banner banner banner banner banner"
+        "hero hero hero hero hero hero hero hero hero hero hero hero"
+        "across across across across across across across across across across across across"
+        "backstory backstory backstory backstory backstory backstory official official official official official official"
+        "one one one one two two two two three three three three"
+        "footer footer footer footer footer footer footer footer footer footer footer footer";
+    
+}
+
+/* Home page */
+header{grid-area:banner;}
+
+section#hero{grid-area:hero;}
+
+main#backstory{grid-area:across;}
+
+section#contribute{grid-area:one;}
+
+section#patreon{grid-area:two;}
+
+section#merch{grid-area:three;}
+
+footer{grid-area:footer;}
+
+/* Help Page */
+
+section#injured{grid-area:backstory;}
+section#captive{grid-area:official;}
+
+/* Animals Page */
+
+#firsthalf{grid-area:backstory;}
+#sechalf{grid-area:official;}
+
+/* Sponsor Page */
+.sponsordesc{grid-area: across;}
+
+/* Banners */
+nav ul, footer ul {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #112B1D;
+    background-size:cover;
+}
+
+li {
+  float: right;
+}
+
+li.leftnav{
+    float:left;
+    color:#EBEBEB;
+    padding-left:10px;
+}
+
+#titletext{
+    float:left;
+    font-size:48px;
+    margin-top:20px;
+}
+
+footer li.leftnav{
+    margin-top:30px;
+}
+
+footer img{
+    margin-top:15px;
+    margin-bottom:15px;
+    margin-right: 15px;
+}
+
+li.text{
+    margin-top:25px;
+}
+
+nav li a{
+  display: block;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+    color:#EBEBEB;
+}
+
+footer li a{
+    padding: 5px;
+}
+
+/* Link Styles */
+
+header a:link, {
+    color: #EBEBEB;
+}
+
+header a:visited {
+    color: #cecccc;
+}
+
+header a:hover {
+  background-color: #1A3A45;
+}
+
+/* Header */
+
+header h1, h2{
+    text-align: center;
+}
+
+header h1{
+    margin-bottom: 0px;
+    font-size: 3em; 
+    color: #112B1D;
+}
+
+header h2{
+    margin-top:0px;
+    font-size: 2em;
+    color: #112B1D;
+}
+
+header h3{
+    text-align: center;
+}
+
+
+/* Homepage */
+/* Hero- code from w3schools */
+
+.hero-image{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url(assets/toto_afd.webp);
+    height:100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 30px;
+}
+
+.hero-text{
+    text-align: center;
+    position:inherit;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin-bottom: -15px;
+    font-size: 1.7em;
+}
+
+/* Section 1 */
+
+main#backstory{
+    margin:70px 10px 10px 10px;
+    padding: 0px 50px;
+}
+
+.firstimg{
+    width:250px;
+    float:left;
+    clear:both;
+    max-height: auto;
+    max-width: 100%;
+    margin: 10px 10px 0px 0px;
+}
+
+section#mission img{
+    width:350px;
+    float:right;
+    clear:both;
+    max-width: 100%;
+    max-height: auto;
+    margin: 10px 0px 10px 10px;
+}
+
+section#mission{
+    margin:5px;
+    padding:10px;
+    background-color: #3A996F;
+    color:white;
+}
+
+/* Section 2 */
+section#contribute, section#patreon, section#merch{
+    margin:10px 10px 40px 10px;
+    padding:10px;
+    background-color: #3A996F;
+    color:white;
+}
+
+section#contribute img, section#patreon img, section#merch img{
+    float:right;
+    clear:both;
+    margin-bottom:10px;
+    margin-left:10px;
+    margin-top: -20px;
+    max-width: 100%;
+    max-height: auto;
+}
+
+section#contribute h3, section#patreon h3, section#merch h3{
+    font-size:1.4em;
+    margin-top:5px;
+}
+
+li.button{
+    display: block;
+    text-align: center;
+    padding: 7px 32px;
+    background-color: #cecccc;
+    clear:both;
+}
+
+section#contribute a, section#patreon a, section#merch a{
+    text-decoration: none;
+    color:#112B1D;
+}
+
+li.button a:hover {
+    background-color: #EBEBEB;
+    background-size:cover;
+}
+
+/* Help Page */
+
+#helpheading{
+    margin-bottom:15px;
+}
+
+#injured, #captive{
+    margin:10px;
+    margin-bottom:40px;
+    padding:10px;
+    background-color: #3A996F;
+    color:white;
+}
+
+#injured img, #captive img{
+    float:right;
+    clear:both;
+    margin: 0px 0px 10px 10px;
+    max-width: 100%;
+    max-height: auto;
+}
+
+section#injured a:hover{
+    color: #cecccc;
+}
+
+section#captive a:hover{
+    background-color: #EBEBEB;}
+
+section#captive a{
+    text-decoration: none;
+    color:#112B1D;
+}
+
+section#injured a{
+    color:white;
+}
+
+/* Residents Page */
+
+header h3{
+    margin-top: -5px;
+}
+
+#firsthalf, #sechalf{
+    margin:10px;
+    margin-bottom:40px;
+    padding:10px;
+    background-color: #3A996F;
+    max-width: 100%;
+    max-height: auto;
+}
+
+#firsthalf a, #sechalf a{
+    text-decoration: none;
+    color:#112B1D;
+}
+
+.animalinfo{
+    margin:10px;
+    padding:10px;
+    padding-left: 18px;
+    padding-right: 18px;
+    background-color: #2B704C;
+    float:left;
+    color:#EBEBEB;
+    font-size: 24px;
+    font-weight:bold;
+    text-align: center;
+}
+
+.desctext{
+    font-size: 16px;
+    font-weight:normal;
+}
+
+.animalinfo img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+/* Sponsor Page */
+.sponspage, article.sponspage {
+    margin:10px;
+    margin-bottom:40px;
+    padding:10px 25px;
+    background-color: #3A996F;
+    max-width: 100%;
+    max-height: auto;
+    color:white;
+}
+
+.sponslist{
+    font-style:italic;
+    font-size:1.1em;
+}
+
+.sponstitle{
+    font-weight:bold;
+    font-size:1.2em;
+}
+
+#address{
+    font-style:italic;
+    font-size:1.1em;
+}
+
+#entail{
+    float:right;
+    clear:both;
+    margin:10px 10px 10px 30px;
+    max-width: 100%;
+    max-height: auto;
+}
+
+.form{
+    float:none;
+}
+
+#formimg{
+    float:left;
+    clear:both;
+    margin:0px 10px 10px 10px;
+    max-width: 100%;
+    max-height: auto;
+}
+
+#intro{ 
+    margin: -17px 10px 10px 10px;
+    padding: 10px 50px;
+}
+
+#coverimg img{
+    max-width:100%;
+    text-align:center;
+}
+
+#coverimg{
+    text-align:center;
+}
+
+/* Form Styles */
+
+input[type=text], select{
+    width:50%;
+    padding: 7px;
+    margin: 5px;
+    box-sizing: border-box;
+}
+
+textarea{
+    width:75%;
+    height: 150px;
+    resize:none;
+}
+
+select, textarea, input[type=text]{
+    background-color: #EBEBEB;
+    font-family: "Quattrocento Sans", sans-serif;
+}
+
+input[type=submit]{
+        float:right;
+    }
+
+input[type=checkbox]{
+    margin-bottom:20px;
+}
+
+fieldset{
+    margin-bottom:20px;
+}
